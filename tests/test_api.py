@@ -16,3 +16,8 @@ def test_plus_one(client):
 def test_square(client):
     result = call(client, '/square', {'x': 2})
     assert result['x'] == 4
+
+
+def test_index(client):
+    result = client.get('/')
+    assert result.data.decode('utf-8') == 'Hello! Try square or plus_one!'

@@ -16,5 +16,12 @@ def square():
     return json.dumps({'x': x * x})
 
 
-if __name__ == "__main__":
-    app.run(debug=False, port=8080, host="0.0.0.0", threaded=True)
+@app.route('/')
+@app.route('/home')
+@app.route('/index')
+def index():
+    return 'Hello! Try square or plus_one!'
+
+
+if __name__ == '__main__':
+    app.run(debug=False, port=8080, host='0.0.0.0', threaded=True)
