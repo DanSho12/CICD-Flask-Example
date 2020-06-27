@@ -1,0 +1,5 @@
+# Local directories
+.env
+
+# Python
+*.pyc
